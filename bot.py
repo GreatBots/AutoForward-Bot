@@ -7,7 +7,6 @@ from telegram.constants import ParseMode
 from telegram.ext import Updater, CommandHandler, MessageHandler, filters, ConversationHandler, CallbackContext, CallbackQueryHandler
 from pymongo import MongoClient
 from config import BOT_TOKEN, MONGODB_URI, API_ID, API_HASH
-from pyrogram import Client, filters
 
 # Initialize logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
@@ -26,6 +25,7 @@ forwarded_messages_collection = db['forwarded_messages']
 STATE_ONE, STATE_TWO = range(2)
 CHOOSING, SELECT_OPTION, SETTING_NAME, SETTING_VALUE = range(4)
 
+# Rest of the code goes here...
 # Define command handlers
 def start(update: Update, context: CallbackContext):
     user = update.effective_user
