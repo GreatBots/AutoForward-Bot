@@ -5,7 +5,7 @@
   "logo": "https://example.com/path/to/your/logo.png",
   "keywords": ["telegram", "bot", "forward", "python"],
   "addons": [
-    "heroku-postgresql:hobby-dev",
+    "heroku-postgresql:mini",
     "scheduler:standard"
   ],
   "env": {
