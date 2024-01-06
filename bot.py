@@ -283,11 +283,12 @@ def add_button(update: Update, context: CallbackContext):
 filter_settings_conversation = ConversationHandler(
     entry_points=[CommandHandler('filters', filters)],
     states={
-        STATE_ONE: [MessageHandler(Filters.text & ~Filters.command, next)],
-        STATE_TWO: [MessageHandler(Filters.text & ~Filters.command, add_button)],
+        STATE_ONE: [MessageHandler(Filters.text & (~Filters.command), next)],
+        STATE_TWO: [MessageHandler(Filters.text & (~Filters.command), add_button)],
     },
     fallbacks=[],
 )
+
 
 # Add command handlers
 dispatcher.add_handler(CommandHandler('add_database', add_database))
