@@ -28,10 +28,5 @@
   },
   "scripts": {
     "heroku-postbuild": "python setup.py"
-  },
-  "formation": {
-    "eco": {
-      "quantity": 1
-    }
   }
 }
