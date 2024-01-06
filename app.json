@@ -30,7 +30,7 @@
     "heroku-postbuild": "python setup.py"
   },
   "formation": {
-    "web": {
+    "eco": {
       "quantity": 1
     }
   }
